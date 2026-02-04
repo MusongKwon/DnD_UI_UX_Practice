@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>D&amp;D Character Manager — Race</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <script src="js/race.js" defer></script>
+        <script src="js/nav.js" defer></script>
+    </head>
+
+    <body>
+        <div class="page">
+            <header class="header">
+                <div class="brand">
+                    <img class="logo" src="images/d20logo.png" alt="D20 die logo" />
+                    <h1 class="title">D&amp;D Character Manager</h1>
+                </div>
+            </header>
+
+            <main class="content">
+                <section class="card race-card" aria-labelledby="race-title">
+                    <h2 class="card-title1" id="race-title">Choose Your Race</h2>
+
+                    <div class="class-grid dynamic-grid" id="race-grid" role="group" aria-label="Choose a race">
+                        <button type="button" class="class-tile" data-race="Aasimar" aria-pressed="false">
+                            <div class="class-name">Aasimar</div>
+                        </button>
+
+                        <button type="button" class="class-tile" data-race="Dragonborn" aria-pressed="false">
+                            <div class="class-name">Dragonborn</div>
+                        </button>
+
+                        <button type="button" class="class-tile" data-race="Dwarf" aria-pressed="false">
+                            <div class="class-name">Dwarf</div>
+                        </button>
+
+                        <button type="button" class="class-tile" data-race="Elf" aria-pressed="false">
+                            <div class="class-name">Elf</div>
+                        </button>
+
+                        <button type="button" class="class-tile" data-race="Gnome" aria-pressed="false">
+                            <div class="class-name">Gnome</div>
+                        </button>
+
+                        <button type="button" class="class-tile" data-race="Goliath" aria-pressed="false">
+                            <div class="class-name">Goliath</div>
+                        </button>
+
+                        <button type="button" class="class-tile" data-race="Halfling" aria-pressed="false">
+                            <div class="class-name">Halfling</div>
+                        </button>
+
+                        <button type="button" class="class-tile" data-race="Human" aria-pressed="false">
+                            <div class="class-name">Human</div>
+                        </button>
+
+                        <button type="button" class="class-tile" data-race="Orc" aria-pressed="false">
+                            <div class="class-name">Orc</div>
+                        </button>
+
+                        <button type="button" class="class-tile" data-race="Tiefling" aria-pressed="false">
+                            <div class="class-name">Tiefling</div>
+                        </button>
+                    </div>
+
+                    <div class="subrace-section" id="subrace-section" hidden>
+                        <h3 class="card-title4" id="subrace-title">Choose Your Subrace</h3>
+
+                        <div class="class-grid dynamic-grid subrace-grid" id="subrace-grid" role="group" aria-label="Choose a subrace"></div>
+                    </div>
+
+                    <div class="button-row">
+                        <a class="btn" id="back" href="index.html">Back</a>
+                        <button type="button" class="btn" id="next">Starting Class</button>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>

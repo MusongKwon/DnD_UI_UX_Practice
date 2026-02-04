@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>D&amp;D Character Manager — Point Buy</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <script src="js/class_info.js" defer></script>
+        <script src="js/point_buy.js" defer></script>
+        <script src="js/nav.js" defer></script>
+    </head>
+
+    
+    <body>
+        <div class="page">
+            <header class="header">
+                <div class="brand">
+                    <img class="logo" src="images/d20logo.png" alt="D20 die logo" />
+                    <h1 class="title">D&amp;D Character Manager</h1>
+                </div>
+            </header>
+
+            <main class="content">
+                <section class="card pointbuy-card" aria-labelledby="point-buy-title">
+                    <h2 class="card-title1" id="point-buy-title">Point Buy Calculator</h2>
+                    <h3 class="card-title3" id="class-subtitle"></h3>
+                    <h4 class="card-title3" id="class-subtitle">Constitution is essential for everybody!</h4>
+                    <h4 class="card-title3" id="class-subtitle">Standard Array is [15, 14, 13, 12, 10, 8].</h4>
+
+                    <div class="pointbuy-table-wrap">
+                        <table class="pointbuy-table" aria-label="Point buy table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Attribute</th>
+                                    <th scope="col">Ability Score</th>
+                                    <th scope="col"></th>
+                                    <th scope="col">Background Bonus</th>
+                                    <th scope="col"></th>
+                                    <th scope="col">Total Score</th>
+                                    <th scope="col">Ability Modifier</th>
+                                    <th scope="col">Point Cost</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Strength</th>
+
+                                    <td>
+                                        <button class="btn btn-sm" type="button" data-ability="str" data-action="score-down" aria-label="Decrease Strength score">▼</button>
+                                        <span data-ability="str" data-field="score">8</span>
+                                        <button class="btn btn-sm" type="button" data-ability="str" data-action="score-up" aria-label="Increase Strength score">▲</button>
+                                    </td>
+
+                                    <td>+</td>
+
+                                    <td>
+                                        <button class="btn btn-sm" type="button" data-ability="str" data-action="bonus-down" aria-label="Decrease Strength background bonus">▼</button>
+                                        <span data-ability="str" data-field="bonus">0</span>
+                                        <button class="btn btn-sm" type="button" data-ability="str" data-action="bonus-up" aria-label="Increase Strength background bonus">▲</button>
+                                    </td>
+
+                                    <td>=</td>
+
+                                    <td><span data-ability="str" data-field="total">8</span></td>
+                                    <td><span data-ability="str" data-field="mod">-1</span></td>
+                                    <td><span data-ability="str" data-field="cost">0</span></td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">Dexterity</th>
+
+                                    <td>
+                                        <button class="btn btn-sm" type="button" data-ability="dex" data-action="score-down" aria-label="Decrease Dexterity score">▼</button>
+                                        <span data-ability="dex" data-field="score">8</span>
+                                        <button class="btn btn-sm" type="button" data-ability="dex" data-action="score-up" aria-label="Increase Dexterity score">▲</button>
+                                    </td>
+
+                                    <td>+</td>
+
+                                    <td>
+                                        <button class="btn btn-sm" type="button" data-ability="dex" data-action="bonus-down" aria-label="Decrease Dexterity background bonus">▼</button>
+                                        <span data-ability="dex" data-field="bonus">0</span>
+                                        <button class="btn btn-sm" type="button" data-ability="dex" data-action="bonus-up" aria-label="Increase Dexterity background bonus">▲</button>
+                                    </td>
+
+                                    <td>=</td>
+
+                                    <td><span data-ability="dex" data-field="total">8</span></td>
+                                    <td><span data-ability="dex" data-field="mod">-1</span></td>
+                                    <td><span data-ability="dex" data-field="cost">0</span></td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">Constitution</th>
+
+                                    <td>
+                                        <button class="btn btn-sm" type="button" data-ability="con" data-action="score-down" aria-label="Decrease Constitution score">▼</button>
+                                        <span data-ability="con" data-field="score">8</span>
+                                        <button class="btn btn-sm" type="button" data-ability="con" data-action="score-up" aria-label="Increase Constitution score">▲</button>
+                                    </td>
+
+                                    <td>+</td>
+
+                                    <td>
+                                        <button class="btn btn-sm" type="button" data-ability="con" data-action="bonus-down" aria-label="Decrease Constitution background bonus">▼</button>
+                                        <span data-ability="con" data-field="bonus">0</span>
+                                        <button class="btn btn-sm" type="button" data-ability="con" data-action="bonus-up" aria-label="Increase Constitution background bonus">▲</button>
+                                    </td>
+
+                                    <td>=</td>
+
+                                    <td><span data-ability="con" data-field="total">8</span></td>
+                                    <td><span data-ability="con" data-field="mod">-1</span></td>
+                                    <td><span data-ability="con" data-field="cost">0</span></td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">Intelligence</th>
+
+                                    <td>
+                                        <button class="btn btn-sm" type="button" data-ability="int" data-action="score-down" aria-label="Decrease Intelligence score">▼</button>
+                                        <span data-ability="int" data-field="score">8</span>
+                                        <button class="btn btn-sm" type="button" data-ability="int" data-action="score-up" aria-label="Increase Intelligence score">▲</button>
+                                    </td>
+
+                                    <td>+</td>
+
+                                    <td>
+                                        <button class="btn btn-sm" type="button" data-ability="int" data-action="bonus-down" aria-label="Decrease Intelligence background bonus">▼</button>
+                                        <span data-ability="int" data-field="bonus">0</span>
+                                        <button class="btn btn-sm" type="button" data-ability="int" data-action="bonus-up" aria-label="Increase Intelligence background bonus">▲</button>
+                                    </td>
+
+                                    <td>=</td>
+
+                                    <td><span data-ability="int" data-field="total">8</span></td>
+                                    <td><span data-ability="int" data-field="mod">-1</span></td>
+                                    <td><span data-ability="int" data-field="cost">0</span></td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">Wisdom</th>
+
+                                    <td>
+                                        <button class="btn btn-sm" type="button" data-ability="wis" data-action="score-down" aria-label="Decrease Wisdom score">▼</button>
+                                        <span data-ability="wis" data-field="score">8</span>
+                                        <button class="btn btn-sm" type="button" data-ability="wis" data-action="score-up" aria-label="Increase Wisdom score">▲</button>
+                                    </td>
+
+                                    <td>+</td>
+
+                                    <td>
+                                        <button class="btn btn-sm" type="button" data-ability="wis" data-action="bonus-down" aria-label="Decrease Wisdom background bonus">▼</button>
+                                        <span data-ability="wis" data-field="bonus">0</span>
+                                        <button class="btn btn-sm" type="button" data-ability="wis" data-action="bonus-up" aria-label="Increase Wisdom background bonus">▲</button>
+                                    </td>
+
+                                    <td>=</td>
+
+                                    <td><span data-ability="wis" data-field="total">8</span></td>
+                                    <td><span data-ability="wis" data-field="mod">-1</span></td>
+                                    <td><span data-ability="wis" data-field="cost">0</span></td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">Charisma</th>
+
+                                    <td>
+                                        <button class="btn btn-sm" type="button" data-ability="cha" data-action="score-down" aria-label="Decrease Charisma score">▼</button>
+                                        <span data-ability="cha" data-field="score">8</span>
+                                        <button class="btn btn-sm" type="button" data-ability="cha" data-action="score-up" aria-label="Increase Charisma score">▲</button>
+                                    </td>
+
+                                    <td>+</td>
+
+                                    <td>
+                                        <button class="btn btn-sm" type="button" data-ability="cha" data-action="bonus-down" aria-label="Decrease Charisma background bonus">▼</button>
+                                        <span data-ability="cha" data-field="bonus">0</span>
+                                        <button class="btn btn-sm" type="button" data-ability="cha" data-action="bonus-up" aria-label="Increase Charisma background bonus">▲</button>
+                                    </td>
+
+                                    <td>=</td>
+
+                                    <td><span data-ability="cha" data-field="total">8</span></td>
+                                    <td><span data-ability="cha" data-field="mod">-1</span></td>
+                                    <td><span data-ability="cha" data-field="cost">0</span></td>
+                                </tr>
+                            </tbody>
+
+                            <tfoot>
+                                <tr>
+                                    <td colspan="7"></td>
+                                    <td>
+                                        Total Points = <span id="points-used">0</span>/27
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td></td>
+                                    <td>
+                                        <button type="button" class="btn" id="reset-scores">Reset</button>
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        <button type="button" class="btn" id="reset-bonuses">Reset</button>
+                                    </td>
+                                    <td colspan="4"></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                    <div class="error-area" id="error-area" role="status" aria-live="polite">
+                        <div class="error-title" id="error-title">Error:</div>
+                        <div class="error-message" id="error-message"></div>
+                    </div>
+
+                    <div class="button-row">
+                        <a class="btn" id="back" href="assign_ability_option.html">Back</a>
+                        <button type="button" class="btn" id="select-skills">Select Skills</button>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>

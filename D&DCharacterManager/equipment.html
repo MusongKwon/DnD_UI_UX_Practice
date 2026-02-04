@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>D&amp;D Character Manager — Equipment</title>
+
+        <link rel="stylesheet" href="css/style.css" />
+
+        <script src="js/equipment.js" defer></script>
+        <script src="js/nav.js" defer></script>
+    </head>
+
+    <body>
+        <div class="page">
+            <header class="header">
+                <div class="brand">
+                    <img class="logo" src="images/d20logo.png" alt="D20 die logo" />
+                    <h1 class="title">D&amp;D Character Manager</h1>
+                </div>
+            </header>
+
+            <main class="content">
+                <section class="card equipment-card" aria-labelledby="equipment-title">
+                    <h2 class="card-title1" id="equipment-title">Equipment</h2>
+                    <p class="card-title3" id="equipment-subtitle">You may equip one item at a time.</p>
+
+                    <div class="equipment-content" id="equipment-content"></div>
+
+                    <div class="button-row">
+                        <a class="btn" id="back" href="character_details.html">Back</a>
+                        <button class="btn" id="equip" type="button">Equip</button>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>

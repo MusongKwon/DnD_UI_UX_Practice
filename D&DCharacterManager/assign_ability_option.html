@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>D&amp;D Character Manager — Assign Ability Options</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <script src="js/nav.js" defer></script>
+    </head>
+
+    <body>
+        <div class="page">
+            <header class="header">
+                <div class="brand">
+                    <img class="logo" src="images/d20logo.png" alt="D20 die logo" />
+                    <h1 class="title">D&amp;D Character Manager</h1>
+                </div>
+            </header>
+
+            <main class="content">
+                <section class="card ability-option-card" aria-labelledby="ability-option-title">
+                    <h2 class="card-title1" id="ability-option-title">Choose How You Want to Generate Your Ability Stats</h2>
+
+                    <div class="ability-option-grid">
+                        <a class="ability-option-tile" id="roll-stats" href="roll_stats.html">
+                            <div class="ability-option-text">
+                                <div class="ability-option-kicker">Test Your Luck</div>
+                                <div class="ability-option-title">Roll for Stats</div>
+                            </div>
+                            <img class="ability-option-image ability-option-image--dice" src="images/rolling_dice.png" alt="Rolling dice icon" />
+                        </a>
+
+                        <a class="ability-option-tile" id="use-point-buy" href="point_buy.html">
+                            <div class="ability-option-text">
+                                <div class="ability-option-kicker">Be Smart!</div>
+                                <div class="ability-option-title">Use Point Buy</div>
+                            </div>
+                            <img class="ability-option-image ability-option-image--brain" src="images/books.png" alt="Brain with book icon" />
+                        </a>
+                    </div>
+
+                    <div class="button-row">
+                        <a class="btn" id="back" href="background.html">Back</a>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>

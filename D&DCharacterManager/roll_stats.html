@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>D&amp;D Character Manager — Stat Roller</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <script src="js/class_info.js" defer></script>
+        <script src="js/roll_stats.js" defer></script>
+        <script src="js/nav.js" defer></script>
+    </head>
+
+    <body>
+        <div class="page">
+            <header class="header">
+                <div class="brand">
+                    <img class="logo" src="images/d20logo.png" alt="D20 die logo" />
+                    <h1 class="title">D&amp;D Character Manager</h1>
+                </div>
+            </header>
+
+            <main class="content">
+                <section class="card roller-card" aria-labelledby="roller-title">
+                    <h2 class="card-title1" id="roller-title">Stat Roller</h2>
+                    <h3 class="card-title3" id="class-subtitle"></h3>
+                    <h4 class="card-title3" id="class-subtitle">Constitution is essential for everybody!</h4>
+
+                    <div class="dice-row" aria-label="Four d6 dice">
+                        <div class="die-cell" id="die-0" aria-label="Die 1">—</div>
+                        <div class="die-cell" id="die-1" aria-label="Die 2">—</div>
+                        <div class="die-cell" id="die-2" aria-label="Die 3">—</div>
+                        <div class="die-cell" id="die-3" aria-label="Die 4">—</div>
+                    </div>
+
+                    <div class="roller-controls">
+                        <button type="button" class="btn" id="roll-btn">Roll</button>
+                        <div class="roll-count" id="roll-count">Rolls: 0/6</div>
+                    </div>
+
+                    <div class="pool-wrap" aria-label="Rolled score pool">
+                        <div class="pool-grid" id="pool-grid">
+                            <div class="pool-cell" data-pool-pos="0"></div>
+                            <div class="pool-cell" data-pool-pos="1"></div>
+                            <div class="pool-cell" data-pool-pos="2"></div>
+                            <div class="pool-cell" data-pool-pos="3"></div>
+                            <div class="pool-cell" data-pool-pos="4"></div>
+                            <div class="pool-cell" data-pool-pos="5"></div>
+
+                            <div class="pool-cell" data-pool-pos="6"></div>
+                            <div class="pool-cell" data-pool-pos="7"></div>
+                            <div class="pool-cell" data-pool-pos="8"></div>
+                            <div class="pool-cell" data-pool-pos="9"></div>
+                            <div class="pool-cell" data-pool-pos="10"></div>
+                            <div class="pool-cell" data-pool-pos="11"></div>
+                        </div>
+                    </div>
+
+                    <div class="ability-assign" aria-label="Assign rolled scores to abilities">
+                        <div class="ability-slot" data-ability="str">
+                            <div class="ability-label">Strength</div>
+                            <button type="button" class="ability-tile" data-ability="str">
+                                <div class="ability-number" data-ability="str" data-field="number">—</div>
+                                <div class="ability-mod" data-ability="str" data-field="mod"></div>
+                            </button>
+
+                            <div class="ability-undo-space">
+                                <button type="button" class="btn btn-undo" data-ability="str" hidden>Undo</button>
+                            </div>
+
+                            <div class="ability-bonus-space">
+                                <select class="ability-bonus" data-ability="str">
+                                    <option value="0" selected>Add Background Bonus</option>
+                                    <option value="2">Add +2</option>
+                                    <option value="1">Add +1</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="ability-slot" data-ability="dex">
+                            <div class="ability-label">Dexterity</div>
+                            <button type="button" class="ability-tile" data-ability="dex">
+                                <div class="ability-number" data-ability="dex" data-field="number">—</div>
+                                <div class="ability-mod" data-ability="dex" data-field="mod"></div>
+                            </button>
+
+                            <div class="ability-undo-space">
+                                <button type="button" class="btn btn-undo" data-ability="dex" hidden>Undo</button>
+                            </div>
+
+                            <div class="ability-bonus-space">
+                                <select class="ability-bonus" data-ability="dex">
+                                    <option value="0" selected>Add Background Bonus</option>
+                                    <option value="2">Add +2</option>
+                                    <option value="1">Add +1</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="ability-slot" data-ability="con">
+                            <div class="ability-label">Constitution</div>
+                            <button type="button" class="ability-tile" data-ability="con">
+                                <div class="ability-number" data-ability="con" data-field="number">—</div>
+                                <div class="ability-mod" data-ability="con" data-field="mod"></div>
+                            </button>
+
+                            <div class="ability-undo-space">
+                                <button type="button" class="btn btn-undo" data-ability="con" hidden>Undo</button>
+                            </div>
+
+                            <div class="ability-bonus-space">
+                                <select class="ability-bonus" data-ability="con">
+                                    <option value="0" selected>Add Background Bonus</option>
+                                    <option value="2">Add +2</option>
+                                    <option value="1">Add +1</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="ability-slot" data-ability="int">
+                            <div class="ability-label">Intelligence</div>
+                            <button type="button" class="ability-tile" data-ability="int">
+                                <div class="ability-number" data-ability="int" data-field="number">—</div>
+                                <div class="ability-mod" data-ability="int" data-field="mod"></div>
+                            </button>
+
+                            <div class="ability-undo-space">
+                                <button type="button" class="btn btn-undo" data-ability="int" hidden>Undo</button>
+                            </div>
+
+                            <div class="ability-bonus-space">
+                                <select class="ability-bonus" data-ability="int">
+                                    <option value="0" selected>Add Background Bonus</option>
+                                    <option value="2">Add +2</option>
+                                    <option value="1">Add +1</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="ability-slot" data-ability="wis">
+                            <div class="ability-label">Wisdom</div>
+                            <button type="button" class="ability-tile" data-ability="wis">
+                                <div class="ability-number" data-ability="wis" data-field="number">—</div>
+                                <div class="ability-mod" data-ability="wis" data-field="mod"></div>
+                            </button>
+
+                            <div class="ability-undo-space">
+                                <button type="button" class="btn btn-undo" data-ability="wis" hidden>Undo</button>
+                            </div>
+
+                            <div class="ability-bonus-space">
+                                <select class="ability-bonus" data-ability="wis">
+                                    <option value="0" selected>Add Background Bonus</option>
+                                    <option value="2">Add +2</option>
+                                    <option value="1">Add +1</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="ability-slot" data-ability="cha">
+                            <div class="ability-label">Charisma</div>
+                            <button type="button" class="ability-tile" data-ability="cha">
+                                <div class="ability-number" data-ability="cha" data-field="number">—</div>
+                                <div class="ability-mod" data-ability="cha" data-field="mod"></div>
+                            </button>
+
+                            <div class="ability-undo-space">
+                                <button type="button" class="btn btn-undo" data-ability="cha" hidden>Undo</button>
+                            </div>
+
+                            <div class="ability-bonus-space">
+                                <select class="ability-bonus" data-ability="cha">
+                                    <option value="0" selected>Add Background Bonus</option>
+                                    <option value="2">Add +2</option>
+                                    <option value="1">Add +1</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="button-row">
+                        <a class="btn" id="back" href="assign_ability_option.html">Back</a>
+                        <button type="button" class="btn" id="select-skills">Select Skills</button>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>D&amp;D Character Manager — Character Details</title>
+
+        <link rel="stylesheet" href="css/style.css" />
+
+        <script src="js/character_details.js" defer></script>
+        <script src="js/nav.js" defer></script>
+    </head>
+
+    <body>
+        <div class="page">
+            <header class="header">
+                <div class="brand">
+                    <img class="logo" src="images/d20logo.png" alt="D20 die logo" />
+                    <h1 class="title">D&amp;D Character Manager</h1>
+                </div>
+            </header>
+
+            <main class="content">
+                <section class="card character-details-card" aria-labelledby="details-title">
+                    <h2 class="card-title1" id="details-title">Character Details</h2>
+
+                    <div class="details-top">
+                        <div class="details-row">
+                            <div class="field">
+                                <div class="field-label">Character Name</div>
+                                <input
+                                    class="field-input"
+                                    id="character-name"
+                                    type="text"
+                                    placeholder="Enter name"
+                                    autocomplete="off"
+                                />
+                            </div>
+
+                            <div class="field">
+                                <div class="field-label">Class &amp; Level</div>
+                                <input class="field-input" id="class-level" type="text" readonly />
+                            </div>
+                        </div>
+
+                        <div class="details-row">
+                            <div class="field">
+                                <div class="field-label">Race</div>
+                                <input class="field-input" id="race" type="text" readonly />
+                            </div>
+
+                            <div class="field">
+                                <div class="field-label">Background</div>
+                                <input class="field-input" id="background" type="text" readonly />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="details-grid">
+                        <section class="details-col details-col-abilities" aria-label="Ability scores">
+                            <div class="details-ability-list" id="ability-list">
+                                <div class="box-group">
+                                    <div class="box-label">Strength</div>
+                                    <div class="details-ability-tile" data-ability="str">
+                                        <div class="details-ability-score" id="ability-score-str">—</div>
+                                        <div class="details-ability-mod" id="ability-mod-str"></div>
+                                    </div>
+                                </div>
+
+                                <div class="box-group">
+                                    <div class="box-label">Dexterity</div>
+                                    <div class="details-ability-tile" data-ability="dex">
+                                        <div class="details-ability-score" id="ability-score-dex">—</div>
+                                        <div class="details-ability-mod" id="ability-mod-dex"></div>
+                                    </div>
+                                </div>
+
+                                <div class="box-group">
+                                    <div class="box-label">Constitution</div>
+                                    <div class="details-ability-tile" data-ability="con">
+                                        <div class="details-ability-score" id="ability-score-con">—</div>
+                                        <div class="details-ability-mod" id="ability-mod-con"></div>
+                                    </div>
+                                </div>
+
+                                <div class="box-group">
+                                    <div class="box-label">Intelligence</div>
+                                    <div class="details-ability-tile" data-ability="int">
+                                        <div class="details-ability-score" id="ability-score-int">—</div>
+                                        <div class="details-ability-mod" id="ability-mod-int"></div>
+                                    </div>
+                                </div>
+
+                                <div class="box-group">
+                                    <div class="box-label">Wisdom</div>
+                                    <div class="details-ability-tile" data-ability="wis">
+                                        <div class="details-ability-score" id="ability-score-wis">—</div>
+                                        <div class="details-ability-mod" id="ability-mod-wis"></div>
+                                    </div>
+                                </div>
+
+                                <div class="box-group">
+                                    <div class="box-label">Charisma</div>
+                                    <div class="details-ability-tile" data-ability="cha">
+                                        <div class="details-ability-score" id="ability-score-cha">—</div>
+                                        <div class="details-ability-mod" id="ability-mod-cha"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="details-col details-col-mid" aria-label="Proficiency, saving throws, and skills">
+                            <div class="box-group" aria-label="Proficiency bonus">
+                                <div class="box-label">Proficiency Bonus</div>
+                                <div class="details-box details-box-plain" id="prof-box">
+                                    <div class="details-plain" id="prof-bonus">+2</div>
+                                </div>
+                            </div>
+
+                            <div class="box-group" aria-label="Saving throws">
+                                <div class="box-label">Saving Throws</div>
+                                <div class="details-box">
+                                    <div class="details-lines" id="saving-throws"></div>
+                                </div>
+                            </div>
+
+                            <div class="box-group details-box-grow" aria-label="Skills">
+                                <div class="box-label">Skills</div>
+                                <div class="details-box details-box-grow">
+                                    <div class="details-lines" id="skills-list"></div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="details-col details-col-right" aria-label="Combat stats and equipment">
+                            <div class="mini-grid">
+                                <div class="box-group">
+                                    <div class="box-label">Initiative</div>
+                                    <div class="mini-tile">
+                                        <div class="mini-value" id="initiative">—</div>
+                                    </div>
+                                </div>
+
+                                <div class="box-group">
+                                    <div class="box-label">Speed</div>
+                                    <div class="mini-tile">
+                                        <div class="mini-value" id="speed">—</div>
+                                    </div>
+                                </div>
+
+                                <div class="box-group">
+                                    <div class="box-label">Armor Class</div>
+                                    <div class="mini-tile">
+                                        <div class="mini-value" id="armor-class">—</div>
+                                    </div>
+                                </div>
+
+                                <div class="box-group">
+                                    <div class="box-label">Hit Points</div>
+                                    <div class="mini-tile">
+                                        <div class="mini-value" id="hit-points">—</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="box-group details-box-grow" aria-label="Equipments">
+                                <div class="box-label">Equipment</div>
+
+                                <div class="details-box details-box-grow">
+                                    <div class="equipments-body" id="equipments-body"></div>
+                                    <button class="btn btn-equip" type="button" id="equip">Equip</button>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="button-row">
+                        <a class="btn" id="back" href="skills.html">Back</a>
+                        <button class="btn" id="continue" type="button" disabled>Continue</button>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>

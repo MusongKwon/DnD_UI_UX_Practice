@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>D&amp;D Character Manager — Skills</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <script src="js/skills.js" defer></script>
+        <script src="js/nav.js" defer></script>
+    </head>
+
+    <body>
+        <div class="page">
+            <header class="header">
+                <div class="brand">
+                    <img class="logo" src="images/d20logo.png" alt="D20 die logo" />
+                    <h1 class="title">D&amp;D Character Manager</h1>
+                </div>
+            </header>
+
+            <main class="content">
+                <section class="card skills-card" aria-labelledby="skills-title">
+                    <h2 class="card-title1" id="skills-title">Select Your Skills</h2>
+                    <h3 class="card-title3" id="skills-subtitle"></h3>
+
+                    <div class="skills-abilities" aria-label="Ability scores and skill selection">
+                        <div class="skills-col" data-ability="str">
+                            <div class="ability-label">Strength</div>
+                            <div class="skills-ability-tile">
+                                <div class="skills-ability-score" id="score-str">—</div>
+                                <div class="skills-ability-mod" id="mod-str"></div>
+                            </div>
+
+                            <div class="skill-list" data-skill-ability="str"></div>
+                        </div>
+
+                        <div class="skills-col" data-ability="dex">
+                            <div class="ability-label">Dexterity</div>
+                            <div class="skills-ability-tile">
+                                <div class="skills-ability-score" id="score-dex">—</div>
+                                <div class="skills-ability-mod" id="mod-dex"></div>
+                            </div>
+
+                            <div class="skill-list" data-skill-ability="dex"></div>
+                        </div>
+
+                        <div class="skills-col" data-ability="con">
+                            <div class="ability-label">Constitution</div>
+                            <div class="skills-ability-tile">
+                                <div class="skills-ability-score" id="score-con">—</div>
+                                <div class="skills-ability-mod" id="mod-con"></div>
+                            </div>
+
+                            <div class="skill-list empty-skill-list">
+                                <div class="no-skill-note">No skills use Constitution.</div>
+                            </div>
+                        </div>
+
+                        <div class="skills-col" data-ability="int">
+                            <div class="ability-label">Intelligence</div>
+                            <div class="skills-ability-tile">
+                                <div class="skills-ability-score" id="score-int">—</div>
+                                <div class="skills-ability-mod" id="mod-int"></div>
+                            </div>
+
+                            <div class="skill-list" data-skill-ability="int"></div>
+                        </div>
+
+                        <div class="skills-col" data-ability="wis">
+                            <div class="ability-label">Wisdom</div>
+                            <div class="skills-ability-tile">
+                                <div class="skills-ability-score" id="score-wis">—</div>
+                                <div class="skills-ability-mod" id="mod-wis"></div>
+                            </div>
+
+                            <div class="skill-list" data-skill-ability="wis"></div>
+                        </div>
+
+                        <div class="skills-col" data-ability="cha">
+                            <div class="ability-label">Charisma</div>
+                            <div class="skills-ability-tile">
+                                <div class="skills-ability-score" id="score-cha">—</div>
+                                <div class="skills-ability-mod" id="mod-cha"></div>
+                            </div>
+
+                            <div class="skill-list" data-skill-ability="cha"></div>
+                        </div>
+                    </div>
+
+                    <div class="choices-bar">
+                        <div class="choices-text" id="choices-text">Selections: 0/0</div>
+                    </div>
+
+                    <div class="button-row">
+                        <a class="btn" id="back" href="roll_stats.html">Back</a>
+                        <button type="button" class="btn" id="finish" disabled>Charcter Description</button>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>
